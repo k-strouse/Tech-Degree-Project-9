@@ -64,8 +64,8 @@ html {
  * Address `font-family` inconsistency between `textarea` and other form
  * elements.
  */
-html,
 button,
+html,
 input,
 select,
 textarea {
@@ -198,8 +198,8 @@ q {
 /**
  * Address `quotes` property not supported in Safari 4.
  */
-q:before,
-q:after {
+q:after,
+q:before {
   content: '';
   content: none; }
 
@@ -251,8 +251,8 @@ ul {
 /**
  * Correct list images handled incorrectly in IE 7.
  */
-nav ul,
-nav ol {
+nav ol,
+nav ul {
   list-style: none;
   list-style-image: none; }
 
@@ -361,8 +361,7 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-button,
-html input[type="button"],
+button, html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;

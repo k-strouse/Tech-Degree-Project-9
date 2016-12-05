@@ -1,0 +1,51 @@
+nav a {
+  display: block;
+}
+
+.name {
+  margin: 0 auto;
+  @include tablet {
+    display: inline-block;
+    text-align: left;
+    margin-left: -90%;
+  }
+  @include desktop {
+    float: left;
+    text-align: left;
+  }
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+  @include tablet {
+    width: 100%;
+  }
+  @include desktop {
+    width: 100%;
+  }
+}
+
+.nav {
+  @include tablet {
+    float: right;
+    display: block;
+    margin: 0 auto;
+  }
+  @include desktop {
+    float: right;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.nav li {
+  @include tablet {
+    float: left;
+  }
+  @include desktop {
+    float: left;
+  }
+}
