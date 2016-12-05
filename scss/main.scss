@@ -1,0 +1,47 @@
+//========================================
+//Global Imports
+//========================================
+
+
+@import 'base/index';
+@import 'layout/index';
+
+
+
+
+
+body {
+  background: orange;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+}
+
+.container {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.name {
+  margin: 0 auto;
+}
+
+
+
+#Layer_1 {
+  width: 20px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
