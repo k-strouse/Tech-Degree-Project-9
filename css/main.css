@@ -8,66 +8,73 @@ ul {
 
 a {
   text-decoration: none;
-  color: #9d9398; }
+  color: #ebecec; }
 
 body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
-  background-color: orange; }
+  background-color: orange;
+  color: #ebecec;
+  font-family: 'Raleway', sans-serif; }
 
 h1 {
-  margin: 0; }
+  margin: 0;
+  font-weight: normal; }
 
 .clearfix::after {
   content: "";
   display: table;
   clear: both; }
 
+header {
+  background-color: #884dff; }
+
+.name {
+  font-size: 1.5em; }
+
 nav a {
   display: block; }
 
 .name {
   margin: 0 auto; }
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (min-width: 768px) {
     .name {
       display: inline-block;
       text-align: left;
-      margin-left: -90%; } }
-  @media (min-width: 1024px) {
-    .name {
-      float: left;
-      text-align: left; } }
+      position: absolute;
+      left: 0px;
+      margin-left: 1.5%; } }
 
 .container {
   width: 90%;
   margin: 0 auto;
-  padding-top: 20px;
+  padding: 20px 0 20px 0;
   text-align: center; }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .container {
-      width: 100%; } }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     .container {
       width: 100%; } }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .nav {
-    float: right;
-    display: block;
-    margin: 0 auto; } }
-@media (min-width: 1024px) {
-  .nav {
-    float: right;
-    display: block;
-    margin: 0 auto; } }
+@media (min-width: 768px) {
+  .navContainer {
+    height: 30px; } }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
+  .nav {
+    float: right;
+    display: block;
+    margin: 0 auto;
+    margin-right: 1.5%;
+    margin-top: 6px; } }
+
+@media (min-width: 768px) {
   .nav li {
-    float: left; } }
-@media (min-width: 1024px) {
-  .nav li {
-    float: left; } }
+    float: left;
+    padding: 0 10px 0 10px; } }
+
+@media (min-width: 768px) {
+  .userInfo {
+    border-left: 2px solid #ebecec; } }
 
 #Layer_1 {
   width: 20px; }

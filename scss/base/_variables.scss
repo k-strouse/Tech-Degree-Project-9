@@ -1,10 +1,13 @@
 //Descriptive color variables
 
-$hyperlink					:    #9d9398;
+$hyperlink				:    #9d9398;
 $hover						:    #f4740c;
-$background					:	 #fbf7f7;
-$border-bottom				:    #ebecec;
-$border-top					:    #dadada;
+$primaryBg        :    #ebecec;
+$secondaryBg			:	   #884dff;
+
+$border-top				:    #dadada;
+$primaryText      :    #ebecec;
+$secondaryText    :    #dadada;
 
 
 
@@ -13,9 +16,9 @@ $border-top					:    #dadada;
 
 $open-sans					:   'Open Sans', sans-serif;
 $tablet-width				:    768px;
-$desktop-width				:    1024px;
-$p-text						:    1em;
-$nav-text         			:    1.25em;
-$p-text-tablet				:    1.15em;
+$desktop-width			:    1024px;
+$p-text						  :    1em;
+$nav-text        		:    1.25em;
+$p-text-tablet			:    1.15em;
 $header-text				:    2em;
-$li-text					:    1.35em;
+$li-text			  		:    1.35em;
