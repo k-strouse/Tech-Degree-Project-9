@@ -4,7 +4,7 @@ nav a {
 
 .name {
   margin: 0 auto;
-  @include tablet {
+  @include desktop {
     display: inline-block;
     text-align: left;
     position: absolute;
@@ -16,21 +16,31 @@ nav a {
 .container {
   width: 90%;
   margin: 0 auto;
-  padding: 20px 0 20px 0;
+  padding-top: 20px;
   text-align: center;
   @include tablet {
     width: 100%;
   }
+  @include desktop {
+    padding-bottom: 20px;
+  }
 }
 
 .navContainer {
-  @include tablet {
+  @include desktop {
     height: 30px;
   }
 }
 
+.ulContainer {
+  @include mobile {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .nav {
-  @include tablet {
+  @include desktop {
     float: right;
     display: block;
     margin: 0 auto;
@@ -40,14 +50,23 @@ nav a {
 }
 
 .nav li {
-  @include tablet {
+  @include mobile {
     float: left;
     padding: 0 10px 0 10px;
   }
 }
 
 .userInfo {
-  @include tablet {
+  @include mobile {
     border-left: 2px solid rgb(235, 236, 236);
   }
+}
+
+
+.picOfMe {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 5px;
 }

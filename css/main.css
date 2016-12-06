@@ -38,7 +38,7 @@ nav a {
 
 .name {
   margin: 0 auto; }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .name {
       display: inline-block;
       text-align: left;
@@ -49,17 +49,25 @@ nav a {
 .container {
   width: 90%;
   margin: 0 auto;
-  padding: 20px 0 20px 0;
+  padding-top: 20px;
   text-align: center; }
   @media (min-width: 768px) {
     .container {
       width: 100%; } }
+  @media (min-width: 1024px) {
+    .container {
+      padding-bottom: 20px; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .navContainer {
     height: 30px; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1px) {
+  .ulContainer {
+    display: flex;
+    justify-content: center; } }
+
+@media (min-width: 1024px) {
   .nav {
     float: right;
     display: block;
@@ -67,16 +75,23 @@ nav a {
     margin-right: 1.5%;
     margin-top: 6px; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1px) {
   .nav li {
     float: left;
     padding: 0 10px 0 10px; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1px) {
   .userInfo {
     border-left: 2px solid #ebecec; } }
 
+.picOfMe {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 5px; }
+
 #Layer_1 {
-  width: 20px; }
+  width: 30px; }
 
 /*# sourceMappingURL=main.css.map */
