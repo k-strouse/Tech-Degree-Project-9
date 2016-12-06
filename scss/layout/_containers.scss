@@ -7,24 +7,25 @@ nav a {
   @include tablet {
     display: inline-block;
     text-align: left;
-    margin-left: -90%;
-  }
-  @include desktop {
-    float: left;
-    text-align: left;
+    position: absolute;
+    left: 0px;
+    margin-left: 1.5%;
   }
 }
 
 .container {
   width: 90%;
   margin: 0 auto;
-  padding-top: 20px;
+  padding: 20px 0 20px 0;
   text-align: center;
   @include tablet {
     width: 100%;
   }
-  @include desktop {
-    width: 100%;
+}
+
+.navContainer {
+  @include tablet {
+    height: 30px;
   }
 }
 
@@ -33,19 +34,20 @@ nav a {
     float: right;
     display: block;
     margin: 0 auto;
-  }
-  @include desktop {
-    float: right;
-    display: block;
-    margin: 0 auto;
+    margin-right: 1.5%;
+    margin-top: 6px;
   }
 }
 
 .nav li {
   @include tablet {
     float: left;
+    padding: 0 10px 0 10px;
   }
-  @include desktop {
-    float: left;
+}
+
+.userInfo {
+  @include tablet {
+    border-left: 2px solid rgb(235, 236, 236);
   }
 }
