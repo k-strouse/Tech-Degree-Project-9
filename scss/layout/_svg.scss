@@ -1,3 +1,21 @@
 #Layer_1 {
   width: 30px;
 }
+
+.SVGnav {
+  background-color: $SVGnav;
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  flex-grow: 1;
+  @include tablet {
+    width: 5%;
+  }
+}
+
+.dashboardIcon,
+.membersIcon,
+.visitsIcon,
+.settingsIcon {
+  padding: 10px;
+}

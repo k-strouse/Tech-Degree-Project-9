@@ -2,6 +2,12 @@
 * {
   box-sizing: border-box; }
 
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
 ul {
   list-style-type: none;
   padding: 0; }
@@ -93,5 +99,21 @@ nav a {
 
 #Layer_1 {
   width: 30px; }
+
+.SVGnav {
+  background-color: #3e474f;
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  flex-grow: 1; }
+  @media (min-width: 768px) {
+    .SVGnav {
+      width: 5%; } }
+
+.dashboardIcon,
+.membersIcon,
+.visitsIcon,
+.settingsIcon {
+  padding: 10px; }
 
 /*# sourceMappingURL=main.css.map */
