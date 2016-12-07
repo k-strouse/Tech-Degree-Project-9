@@ -13,6 +13,11 @@ nav a {
   }
 }
 
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
@@ -69,4 +74,20 @@ nav a {
   border-radius: 50%;
   vertical-align: middle;
   margin-right: 5px;
+}
+
+.mainContent {
+  width: 100%;
+}
+
+.dashContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.searchHeader {
+  display: flex;
+  align-items: center;
 }
