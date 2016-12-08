@@ -84,10 +84,32 @@ nav a {
   display: flex;
   flex-direction: row;
   width: 100%;
+  flex-grow: 1;
   justify-content: space-between;
+  border-bottom: 1px solid $border-top;
+  > div {
+    padding: 0 20px 0 20px;
+  }
 }
 
 .searchHeader {
   display: flex;
   align-items: center;
+}
+
+.dashHeader {
+  border-right: 1px solid $border-top;
+  border-bottom: 1px solid $primaryBg;
+  z-index: 9999;
+  margin-bottom: -1px;
+}
+
+#dashSearch {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px #666;
+  height: 30px;
+  @include tablet {
+    width: 350px;
+  }
 }
