@@ -1,3 +1,19 @@
+var $alert = $('#alert');
+var $closeIcon = $('#closeIcon');
+
+
+
+
+/*   ALERT NOTIFCATION    */
+$closeIcon[0].onclick = function() {
+  $alert[0].style.display = 'none';
+  console.log('Close notification function has run');
+};
+
+
+
+
+
 var ctx = $('#myChart');
 var data = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
