@@ -149,4 +149,32 @@ nav a {
 .settingsIcon {
   padding: 10px; }
 
+.ui-widget-header {
+  background: #ebecec !important;
+  color: #884dff !important; }
+
+#alert {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 20px;
+  height: 50px;
+  align-items: center;
+  background: #884dff;
+  border-radius: 5px; }
+  #alert span:nth-child(1) {
+    margin-left: 10px;
+    font-weight: bold; }
+  #alert a {
+    margin-right: 10px; }
+
+.closeSVG {
+  width: 20px;
+  height: auto;
+  fill: white;
+  margin-right: 10px; }
+
+#icons {
+  fill: #ebecec; }
+
 /*# sourceMappingURL=main.css.map */
