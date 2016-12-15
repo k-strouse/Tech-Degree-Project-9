@@ -13,7 +13,7 @@
       <header>
         <div class="container">
           <nav class="navContainer clearfix">
-            <h1 class="name"><a id="top"><strong>Your</strong>App&trade;</a></h1>
+            <h1 class="name"><a href='#' id="top"><strong>Your</strong>App&trade;</a></h1>
               <div class="ulContainer">
                 <ul class="nav center-horizontal clearfix">
                   <li class="navSVG"><a href="#">
@@ -32,6 +32,7 @@
                       </g>
                     </svg></a>
                   </li>
+                  <li id='iconStatus'><a href='#'></a></li>
                   <li class="userInfo"><a href="#contact-link"><img class="picOfMe" src="img/kyle.jpg" alt="Me!">Kyle Strouse</a></li>
                 </ul>
               </div>
@@ -41,6 +42,7 @@
       <div class='content'>
         <div class='SVGnav'>
           <div class='dashboardIcon'>
+            <a href = '#'>
             <?xml version="1.0" encoding="utf-8"?>
             <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
             <svg version="1.1" id="Line_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -59,7 +61,7 @@
             			c-1.7,0-3,1.3-3,3C6,16.7,7.3,18,9,18z M8,14h2v2H8V14z"/>
             	</g>
             </g>
-            </svg>
+          </svg></a>
           </div>
           <div class='membersIcon'>
             <?xml version="1.0" encoding="utf-8"?>
@@ -143,16 +145,19 @@
             <g id="info"/><g id="icons"><path d="M14.8,12l3.6-3.6c0.8-0.8,0.8-2,0-2.8c-0.8-0.8-2-0.8-2.8,0L12,9.2L8.4,5.6c
               -0.8-0.8-2-0.8-2.8,0   c-0.8,0.8-0.8,2,0,2.8L9.2,12l-3.6,3.6c-0.8,0.8-0.8,2,0,2.8C6,18.8,6.5,19,7,19s1-0.2,1.4
               -0.6l3.6-3.6l3.6,3.6   C16,18.8,16.5,19,17,19s1-0.2,1.4-0.6c0.8-0.8,0.8-2,0-2.8L14.8,12z" id="exit"/></g></svg></a>
-              <div>
           </div>
-
-
-          <!---
-          <canvas id='myChart' width='400' height='400'></canvas>
-
--->
-
-
+        </div>
+        <div id='trafficHeader' class='trafficHeader'>
+          <h1>Traffic</h1>
+          <ul class='trafficNav'>
+            <li id='li1' class='selected'><a href='#' id='hourly'>Hourly</a></li>
+            <li id='li2'><a href='#' id='daily'>Daily</a></li>
+            <li id='li3'><a href='#' id='weekly'>Weekly</a></li>
+            <li id='li4'><a href='#' id='monthly'>Monthly</a></li>
+        </div>
+        <div>
+        <div class='lineChart'>
+          <canvas id='lineChart'></canvas>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>

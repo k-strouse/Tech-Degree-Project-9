@@ -42,7 +42,7 @@ nav a {
 
 .name {
   margin: 0 auto; }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     .name {
       display: inline-block;
       text-align: left;
@@ -57,25 +57,29 @@ nav a {
 .container {
   width: 90%;
   margin: 0 auto;
-  padding-top: 20px;
   text-align: center; }
   @media (min-width: 768px) {
     .container {
-      width: 100%; } }
-  @media (min-width: 1024px) {
+      width: 100%;
+      padding-top: 20px; } }
+  @media (min-width: 768px) {
     .container {
       padding-bottom: 20px; } }
 
 @media (min-width: 1024px) {
   .navContainer {
     height: 30px; } }
+@media (min-width: 1px) {
+  .navContainer {
+    display: flex;
+    flex-direction: column; } }
 
 @media (min-width: 1px) {
   .ulContainer {
     display: flex;
     justify-content: center; } }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .nav {
     float: right;
     display: block;
@@ -100,13 +104,12 @@ nav a {
   margin-right: 5px; }
 
 .mainContent {
-  width: 100%; }
+  width: calc(100% - 40px); }
 
 .dashContainer {
   display: flex;
   flex-direction: row;
   width: 100%;
-  flex-grow: 1;
   justify-content: space-between;
   border-bottom: 1px solid #dadada; }
   .dashContainer > div {
@@ -131,17 +134,55 @@ nav a {
     #dashSearch {
       width: 350px; } }
 
+.trafficHeader {
+  padding: 0 20px; }
+
+h1 {
+  float: left; }
+
+.lineChart {
+  padding: 0 20px; }
+
+.trafficNav {
+  float: right;
+  display: flex;
+  flex-direction: row; }
+  .trafficNav li {
+    padding: 10px;
+    margin: 0 3px;
+    border: 2px solid #33cc33;
+    border-radius: 30%; }
+  .trafficNav li:hover {
+    font-weight: bold;
+    background: #884dff;
+    border-radius: 30%; }
+
+.selected {
+  font-weight: bold;
+  background: #884dff;
+  border-radius: 30%; }
+
+.monthlyChart {
+  padding: 0 20px; }
+
+.membersIcon svg {
+  width: 75%; }
+
+#line_2 {
+  border-left: 2px solid white; }
+
 #Layer_1 {
   width: 30px; }
 
 .SVGnav {
   background-color: #3e474f;
-  display: flex;
-  flex-direction: column;
-  width: 10%; }
+  display: block;
+  min-width: 40px;
+  max-width: 40px; }
   @media (min-width: 768px) {
     .SVGnav {
-      width: 5%; } }
+      min-width: 80px;
+      max-width: 80px; } }
 
 .dashboardIcon,
 .membersIcon,
@@ -149,9 +190,14 @@ nav a {
 .settingsIcon {
   padding: 10px; }
 
-.ui-widget-header {
-  background: #ebecec !important;
-  color: #884dff !important; }
+#iconStatus {
+  width: 10px;
+  height: 10px;
+  background: #33cc33;
+  border-radius: 5px;
+  position: relative;
+  padding: 0 !important;
+  margin: 0 10px 0 -15px; }
 
 #alert {
   display: flex;

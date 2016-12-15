@@ -4,11 +4,12 @@
 
 .SVGnav {
   background-color: $SVGnav;
-  display: flex;
-  flex-direction: column;
-  width: 10%;
+  display: block;
+  min-width: 40px;
+  max-width: 40px;
   @include tablet {
-    width: 5%;
+    min-width: 80px;
+    max-width: 80px;
   }
 }
 

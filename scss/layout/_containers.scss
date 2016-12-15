@@ -4,7 +4,7 @@ nav a {
 
 .name {
   margin: 0 auto;
-  @include desktop {
+  @include tablet {
     display: inline-block;
     text-align: left;
     position: absolute;
@@ -21,12 +21,12 @@ nav a {
 .container {
   width: 90%;
   margin: 0 auto;
-  padding-top: 20px;
   text-align: center;
   @include tablet {
     width: 100%;
+    padding-top: 20px;
   }
-  @include desktop {
+  @include tablet {
     padding-bottom: 20px;
   }
 }
@@ -34,6 +34,10 @@ nav a {
 .navContainer {
   @include desktop {
     height: 30px;
+  }
+  @include mobile {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -45,7 +49,7 @@ nav a {
 }
 
 .nav {
-  @include desktop {
+  @include tablet {
     float: right;
     display: block;
     margin: 0 auto;
@@ -77,14 +81,13 @@ nav a {
 }
 
 .mainContent {
-  width: 100%;
+  width: calc(100% - 40px);
 }
 
 .dashContainer {
   display: flex;
   flex-direction: row;
   width: 100%;
-  flex-grow: 1;
   justify-content: space-between;
   border-bottom: 1px solid $border-top;
   > div {
@@ -112,4 +115,49 @@ nav a {
   @include tablet {
     width: 350px;
   }
+}
+
+.trafficHeader {
+  padding: 0 20px;
+} h1 {
+ float: left;
+}
+
+.lineChart {
+  padding: 0 20px;
+}
+
+.trafficNav {
+  float: right;
+  display: flex;
+  flex-direction: row;
+  li {
+  padding: 10px;
+  margin: 0 3px;
+  border: 2px solid $thirdBg;
+  border-radius: 30%;
+  }
+  li:hover {
+    font-weight: bold;
+    background: $secondaryBg;
+    border-radius: 30%;
+  }
+}
+
+.selected {
+  font-weight: bold;
+  background: $secondaryBg;
+  border-radius: 30%;
+}
+
+.monthlyChart {
+  padding: 0 20px;
+}
+
+.membersIcon svg {
+  width: 75%;
+}
+
+#line_2 {
+  border-left: 2px solid white;
 }

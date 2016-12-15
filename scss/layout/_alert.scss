@@ -1,6 +1,11 @@
-.ui-widget-header {
-  background: $primaryText !important;
-  color: $secondaryBg !important;
+#iconStatus {
+  width: 10px;
+  height: 10px;
+  background: $thirdBg;
+  border-radius: 5px;
+  position: relative;
+  padding: 0 !important;
+  margin: 0 10px 0 -15px;
 }
 
 #alert {
