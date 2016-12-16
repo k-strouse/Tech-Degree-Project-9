@@ -26,6 +26,9 @@ h1 {
   margin: 0;
   font-weight: normal; }
 
+.bar_pie h2 {
+  margin: 0; }
+
 .clearfix::after {
   content: "";
   display: table;
@@ -140,9 +143,6 @@ nav a {
 h1 {
   float: left; }
 
-.lineChart {
-  padding: 0 20px; }
-
 .trafficNav {
   float: right;
   display: flex;
@@ -162,14 +162,43 @@ h1 {
   background: #884dff;
   border-radius: 30%; }
 
-.monthlyChart {
-  padding: 0 20px; }
-
 .membersIcon svg {
   width: 75%; }
 
-#line_2 {
-  border-left: 2px solid white; }
+.lineChart {
+  padding: 20px;
+  border-bottom: 2px solid #dadada; }
+
+.bar_pie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px; }
+  @media (min-width: 1024px) {
+    .bar_pie {
+      flex-direction: row;
+      flex: 1; } }
+
+.barDiv,
+.pieDiv {
+  width: 100%; }
+  @media (min-width: 1024px) {
+    .barDiv,
+    .pieDiv {
+      width: 50%; } }
+
+@media (min-width: 1024px) {
+  .barDiv {
+    padding-right: 10px;
+    border-right: 2px solid #dadada; } }
+
+@media (min-width: 1024px) {
+  .pieDiv {
+    padding-left: 10px; } }
+
+@media (min-width: 1024px) {
+  #pieChart {
+    height: 225px !important; } }
 
 #Layer_1 {
   width: 30px; }

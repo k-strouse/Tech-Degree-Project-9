@@ -7,8 +7,9 @@ var $hourly = $('#li1');
 var $daily = $('#li2');
 var $weekly= $('#li3');
 var $monthly = $('#li4');
-
-
+var $barChart = $('#barChart');
+var $pieChart = $('#pieChart');
+var $bar2Chart = $('#bar2Chart');
 
 /*   ALERT NOTIFCATION    */
 $('#closeIcon').on('click', function() {
@@ -17,9 +18,25 @@ $('#closeIcon').on('click', function() {
   console.log('Close notification function has run');
 });
 
-/*  LINE CHARTS  */
+/*   CHARTS  */
 
-Chart.defaults.global.legend.display = false;
+Chart.defaults.global.legend.display = true;
+
+/*Random Scaling Factor*/
+
+var RSFh = function() {
+  return Math.round(Math.random() * 10)
+};
+var RSFd = function() {
+  return Math.round(Math.random() * 100)
+};
+var RSFw = function() {
+  return Math.round(Math.random() * 1000)
+};
+var RSFm = function() {
+  return Math.round(Math.random() * 10000)
+};
+
 
 /*   HOURLY LINE CHART DATA  */
 
@@ -37,7 +54,7 @@ var hourlyData = {
             pointRadius: 5,
             lineTension: 0,
             borderWidth: 1,
-            data: [10, 15, 23, 25, 28, 30, 35, 32, 24, 12, 6, 2],
+            data: [RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh()],
         }
     ],
     options: {
@@ -54,7 +71,7 @@ var dailyData = {
     labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
     datasets: [
         {
-            label: "Weekly Traffic",
+            label: "Daily Traffic",
             backgroundColor: 'rgba(136, 77, 255, 0.1)',
             borderColor: 'rgba(136, 77, 255, 1)',
             borderCapStyle: 'butt',
@@ -63,9 +80,13 @@ var dailyData = {
             pointRadius: 5,
             lineTension: 0,
             borderWidth: 1,
-            data: [33, 31, 21, 18, 46, 74, 69],
+            data: [RSFd(), RSFd(), RSFd(), RSFd(), RSFd(), RSFd(), RSFd()],
         }
-    ]
+    ],
+    options: {
+            responsive: true,
+            maintainAspectRatio: true,
+    }
 };
 
 /*   WEEKLY LINE CHART DATA  */
@@ -83,15 +104,19 @@ var weeklyData = {
             pointRadius: 5,
             lineTension: 0,
             borderWidth: 1,
-            data: [250, 122, 276, 100],
+            data: [RSFw(), RSFw(), RSFw(), RSFw()],
         }
-    ]
+    ],
+    options: {
+            responsive: true,
+            maintainAspectRatio: true,
+    }
 };
 
 /*   MONTHLY LINE CHART DATA  */
 
 var monthlyData = {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     datasets: [
         {
             label: "Monthly Traffic",
@@ -103,9 +128,13 @@ var monthlyData = {
             pointRadius: 5,
             lineTension: 0,
             borderWidth: 1,
-            data: [1659, 1200, 2200, 1340, 987, 1650, 350],
+            data: [RSFm(), RSFm(), RSFm(), RSFm(), RSFm(), RSFm(), RSFm(), RSFm(), RSFm(), RSFm(), RSFm(), RSFm()],
         }
-    ]
+    ],
+    options: {
+            responsive: true,
+            maintainAspectRatio: true,
+    }
 };
 
 function createChart(ctx, chartType, data) {
@@ -148,12 +177,93 @@ $(selector).on('click', function () {
   $(this).addClass('selected');
 });
 
+/*   BAR CHART   */
+
+var barData = {
+    labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    datasets: [
+        {
+            label: "Peak Users",
+            backgroundColor: 'rgba(136, 77, 255, 0.1)',
+            borderColor: 'rgba(136, 77, 255, 1)',
+            borderWidth: 1,
+            borderCapStyle: 'round',
+            data: [RSFd(), RSFd(), RSFd(), RSFd(), RSFd(), RSFd(), RSFd()],
+        },
+        {
+            label: "Average Users",
+            backgroundColor: 'rgba(51, 204, 51, 0.1)',
+            borderColor: 'rgba(51, 204, 51, 1)',
+            borderWidth: 1,
+            borderCapStyle: 'round',
+            data: [RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh()],
+        }
+    ],
+    options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        stepSize: 20,
+                        max: 150
+            }
+          }]
+        }
+      }
+};
+
+var barChart = new Chart($barChart, {
+    type: 'bar',
+    data: barData,
+    options: {}
+});
+
+/*   PIE CHART   */
+
+var pieData = {
+  labels: ['Phones', 'Tablets', 'Desktop'],
+  datasets: [
+    {
+      label: 'Mobile Users',
+      data: [RSFd(), RSFd(), RSFd()],
+      backgroundColor: [
+        '#884dff',
+        '#33cc33',
+        '#009999'
+      ]
+    }
+  ]
+};
+
+var pieChart = new Chart($pieChart, {
+  type: 'doughnut',
+  data: pieData,
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    legend: {
+      display: true,
+      position: 'right',
+      fullWidth: true
+    },
+    animation: {
+      animateScale: true
+    }
+  }
+});
 
 
+var canvas = document.getElementById('barChart');
+fitToContainer(canvas);
 
-
-
-
+function fitToContainer(canvas) {
+  canvas.style.width='100%';
+  canvas.style.height='100%';
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+}
 
 
 

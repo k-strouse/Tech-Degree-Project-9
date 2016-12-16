@@ -148,7 +148,7 @@
           </div>
         </div>
         <div id='trafficHeader' class='trafficHeader'>
-          <h1>Traffic</h1>
+          <h2>TRAFFIC</h2>
           <ul class='trafficNav'>
             <li id='li1' class='selected'><a href='#' id='hourly'>Hourly</a></li>
             <li id='li2'><a href='#' id='daily'>Daily</a></li>
@@ -159,7 +159,29 @@
         <div class='lineChart'>
           <canvas id='lineChart'></canvas>
         </div>
+      <div class='bar_pie'>
+        <div class='barDiv'>
+          <div class='barHeader'>
+            <h2>DAILY TRAFFIC</h2>
+          </div>
+          <div class='barDivDiv'>
+            <canvas id='barChart'></canvas>
+          </div>
+        </div>
+        <div class='pieDiv'>
+          <div class='pieHeader'>
+            <h2>MOBILE USERS</h2>
+          </div>
+          <div class='pieDivDiv'>
+            <canvas id='pieChart'></canvas>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+
+<canvas id='bar2Chart'></canvas>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
   	<script type="text/javascript" src="scripts.js"> </script>
