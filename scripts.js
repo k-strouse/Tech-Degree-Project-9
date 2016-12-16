@@ -223,15 +223,16 @@ var barChart = new Chart($barChart, {
 /*   PIE CHART   */
 
 var pieData = {
-  labels: ['Phones', 'Tablets', 'Desktop'],
+  labels: ['Phones', 'Tablets', 'Desktop', 'Gaming Consoles'],
   datasets: [
     {
       label: 'Mobile Users',
-      data: [RSFd(), RSFd(), RSFd()],
+      data: [RSFd(), RSFd(), RSFd(), RSFd()],
       backgroundColor: [
         '#884dff',
         '#33cc33',
-        '#009999'
+        '#009999',
+        '#ffcc00'
       ]
     }
   ]
