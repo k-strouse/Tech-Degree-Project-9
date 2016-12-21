@@ -37,6 +37,10 @@ h1 {
 	margin: 0;
 }
 
+h3,
+p {
+	margin: 0 !important;
+}
 
 
 .clearfix::after {
@@ -51,4 +55,22 @@ header {
 
 .name {
 	font-size: 1.5em;
+}
+
+.socialText,
+.memText {
+	color: $secondaryBg;
+	p {
+		color: $primaryText;
+		font-size: .8em;
+	}
+}
+
+.socialMetric {
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+.bold {
+	font-weight: bold;
 }

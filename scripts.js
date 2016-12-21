@@ -10,6 +10,7 @@ var $monthly = $('#li4');
 var $barChart = $('#barChart');
 var $pieChart = $('#pieChart');
 var $bar2Chart = $('#bar2Chart');
+var $metricText = $('#metricText');
 
 /*   ALERT NOTIFCATION    */
 $('#closeIcon').on('click', function() {
@@ -45,7 +46,7 @@ var hourlyData = {
     labels: ['6:00', '8:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00', '0:00', '2:00', '4:00'],
     datasets: [
         {
-            label: "Weekly Traffic",
+            label: "Hourly Traffic",
             backgroundColor: 'rgba(136, 77, 255, 0.1)',
             borderColor: 'rgba(136, 77, 255, 1)',
             borderCapStyle: 'butt',
@@ -265,9 +266,6 @@ function fitToContainer(canvas) {
   canvas.width = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
 }
-
-
-
 
 
 

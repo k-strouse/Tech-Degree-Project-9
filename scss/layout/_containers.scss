@@ -82,6 +82,9 @@ nav a {
 
 .mainContent {
   width: calc(100% - 40px);
+  @include tablet {
+    width: calc(100% - 80px);
+  }
 }
 
 .dashContainer {
@@ -94,6 +97,7 @@ nav a {
     padding: 0 20px 0 20px;
   }
 }
+
 
 .searchHeader {
   display: flex;
@@ -194,6 +198,153 @@ nav a {
   }
 }
 
-.socialDiv {
+.socialDiv,
+.membersDiv {
   padding: 0 20px;
+}
+
+.socialIconsUl {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+.socialIcons ul li svg {
+  width: 30px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+
+.twitter,
+.facebook,
+.google {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.twitterText,
+.facebookText,
+.googleText {
+  padding-left: 20px;
+}
+
+.twitterContainer,
+.facebookContainer,
+.googleContainer {
+  width: 50px;
+  height: 50px;
+  background-color: $secondaryBg;
+  border-radius: 50%;
+}
+
+.twitterDash,
+.facebookDash,
+.googleDash {
+  padding: 10px;
+  border: 2px solid $border-top;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+#Layer_1 {
+  position: relative;
+  top: 25%;
+  fill: #fff;
+}
+
+#Layer_2 {
+  position: relative;
+  top: 15%;
+  fill: #fff;
+}
+
+#Layer_3 {
+  position: relative;
+  top: 22%;
+  fill: #fff;
+}
+
+.membersDiv {
+  display: flex;
+  flex-direction: column;
+    @include desktop {
+    flex-direction: row;
+    border-top: 2px solid $border-top;
+    border-bottom: 2px solid $border-top;
+  }
+}
+
+.newMembers,
+.membersActivity {
+  width: 100%;
+  @include desktop {
+    width: 50%;
+  }
+    img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+  }
+}
+
+.newMembers {
+  padding-right: 10px;
+  @include desktop {
+    border-right: 2px solid $border-top;
+  }
+}
+
+.membersActivity{
+  @include desktop {
+    padding-left: 20px;
+  }
+}
+
+.mem1,
+.mem2,
+.mem3,
+.mem4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2px solid $border-top;
+  padding: 10px 0;
+  margin-right: 20px;
+}
+
+.mem4 {
+  border-bottom: none !important;
+}
+
+.memText,
+.memDate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.memText {
+  padding-left: 10px;
+  a {
+    color: $secondaryBg;
+  }
+  h3 {
+    color: $primaryText;
+  }
+}
+
+.memDate {
+  flex-grow: 2;
+  text-align: right !important;
+}
+
+.memDate svg {
+  align-self: flex-end;
 }
