@@ -39,7 +39,11 @@ h1 {
 
 h3,
 p {
+	font-size: .8em;
 	margin: 0 !important;
+	@include tablet {
+		font-size: 1.17em;
+	}
 }
 
 

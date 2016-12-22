@@ -21,7 +21,7 @@ $('#closeIcon').on('click', function() {
 
 /*   CHARTS  */
 
-Chart.defaults.global.legend.display = true;
+Chart.defaults.global.legend.display = false;
 
 /*Random Scaling Factor*/
 
@@ -199,26 +199,28 @@ var barData = {
             borderCapStyle: 'round',
             data: [RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh()],
         }
-    ],
-    options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        min: 0,
-                        stepSize: 20,
-                        max: 150
-            }
-          }]
-        }
-      }
+    ]
 };
 
 var barChart = new Chart($barChart, {
     type: 'bar',
     data: barData,
-    options: {}
+    options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        stepSize: 20,
+                        max: 120
+            }
+          }],
+              xAxes: [{
+                display: false
+          }]
+        }
+      }
 });
 
 /*   PIE CHART   */

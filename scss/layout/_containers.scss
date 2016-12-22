@@ -91,10 +91,13 @@ nav a {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-between;
   border-bottom: 1px solid $border-top;
+  justify-content: center;
+  @include tablet {
+    justify-content: space-between;
+  }
   > div {
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
   }
 }
 
@@ -102,13 +105,25 @@ nav a {
 .searchHeader {
   display: flex;
   align-items: center;
+  padding: 20px !important;
+  @include tablet {
+    padding: 0 20px !important;
+  }
 }
+
 
 .dashHeader {
   border-right: 1px solid $border-top;
   border-bottom: 1px solid $primaryBg;
   z-index: 9999;
   margin-bottom: -1px;
+  display: none;
+  @include tablet {
+    display: block;
+  }
+  h2 {
+    font-size: 1.25em;
+  }
 }
 
 #dashSearch {
@@ -128,19 +143,27 @@ nav a {
 }
 
 .trafficNav {
-  float: right;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  @include tablet {
+    float: right;
+    display: flex;
+    flex-direction: row;
+  }
   li {
   padding: 10px;
   margin: 0 3px;
-  border: 2px solid $thirdBg;
-  border-radius: 30%;
+  border-radius: 50px;
+  font-size: .5em;
+  @include tablet {
+    font-size: 1.17em;
+  }
   }
   li:hover {
     font-weight: bold;
     background: $secondaryBg;
-    border-radius: 30%;
+    border-radius: 50px;
   }
 }
 
@@ -148,6 +171,9 @@ nav a {
   font-weight: bold;
   background: $secondaryBg;
   border-radius: 30%;
+  a {
+      color: $secondaryText;  
+  }
 }
 
 .membersIcon svg {
@@ -163,7 +189,7 @@ nav a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 20px;
+  padding: 0;
   border-bottom: 2px solid $border-top;
   @include desktop {
     flex-direction: row;
@@ -180,15 +206,24 @@ nav a {
 }
 
 .barDiv {
-  @include desktop {
-    padding-right: 10px;
-    border-right: 2px solid $border-top;
-  }
+  padding: 20px;
+    @include desktop {
+      padding-right: 10px;
+      border-right: 2px solid $border-top;
+      padding-bottom: 0px;
+    }
 }
 
 .pieDiv {
+  padding: 20px;
+  border-top: 2px solid $border-top;
+  @include tablet {
+    padding-bottom: 20px;
+  }
   @include desktop {
     padding-left: 10px;
+    padding-top: 20px;
+    border-top: none;
   }
 }
 
@@ -200,6 +235,13 @@ nav a {
 
 .socialDiv,
 .membersDiv {
+  padding: 0;
+  @include desktop {
+    padding: 0 20px;
+  }
+}
+
+.socialDiv {
   padding: 0 20px;
 }
 
@@ -274,9 +316,9 @@ nav a {
 .membersDiv {
   display: flex;
   flex-direction: column;
+      border-top: 2px solid $border-top;
     @include desktop {
     flex-direction: row;
-    border-top: 2px solid $border-top;
     border-bottom: 2px solid $border-top;
   }
 }
@@ -284,6 +326,7 @@ nav a {
 .newMembers,
 .membersActivity {
   width: 100%;
+  padding: 0 20px;
   @include desktop {
     width: 50%;
   }
@@ -302,8 +345,23 @@ nav a {
 }
 
 .membersActivity{
+  border-top: 2px solid $border-top;
   @include desktop {
     padding-left: 20px;
+    border-top: none;
+  }
+}
+
+.normalEmail {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+
+.mobileEmail {
+  @include tablet {
+    display: none;
   }
 }
 

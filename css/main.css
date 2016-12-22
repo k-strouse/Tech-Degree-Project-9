@@ -13,13 +13,13 @@ ul {
 
 a {
   text-decoration: none;
-  color: #7c8383; }
+  color: #181b1b; }
 
 body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
-  color: #7c8383;
+  color: #181b1b;
   font-family: 'Raleway', sans-serif; }
 
 h1 {
@@ -31,7 +31,12 @@ h1 {
 
 h3,
 p {
+  font-size: .8em;
   margin: 0 !important; }
+  @media (min-width: 768px) {
+    h3,
+    p {
+      font-size: 1.17em; } }
 
 .clearfix::after {
   content: "";
@@ -49,7 +54,7 @@ header {
   color: #884dff; }
   .socialText p,
   .memText p {
-    color: #7c8383;
+    color: #181b1b;
     font-size: .8em; }
 
 .socialMetric {
@@ -135,20 +140,33 @@ nav a {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-between;
-  border-bottom: 1px solid #dadada; }
+  border-bottom: 1px solid #dadada;
+  justify-content: center; }
+  @media (min-width: 768px) {
+    .dashContainer {
+      justify-content: space-between; } }
   .dashContainer > div {
-    padding: 0 20px 0 20px; }
+    padding: 0 20px; }
 
 .searchHeader {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  padding: 20px !important; }
+  @media (min-width: 768px) {
+    .searchHeader {
+      padding: 0 20px !important; } }
 
 .dashHeader {
   border-right: 1px solid #dadada;
   border-bottom: 1px solid #fff;
   z-index: 9999;
-  margin-bottom: -1px; }
+  margin-bottom: -1px;
+  display: none; }
+  @media (min-width: 768px) {
+    .dashHeader {
+      display: block; } }
+  .dashHeader h2 {
+    font-size: 1.25em; }
 
 #dashSearch {
   border: 1px solid #ccc;
@@ -166,23 +184,33 @@ h1 {
   float: left; }
 
 .trafficNav {
-  float: right;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: center; }
+  @media (min-width: 768px) {
+    .trafficNav {
+      float: right;
+      display: flex;
+      flex-direction: row; } }
   .trafficNav li {
     padding: 10px;
     margin: 0 3px;
-    border: 2px solid #33cc33;
-    border-radius: 30%; }
+    border-radius: 50px;
+    font-size: .5em; }
+    @media (min-width: 768px) {
+      .trafficNav li {
+        font-size: 1.17em; } }
   .trafficNav li:hover {
     font-weight: bold;
     background: #884dff;
-    border-radius: 30%; }
+    border-radius: 50px; }
 
 .selected {
   font-weight: bold;
   background: #884dff;
   border-radius: 30%; }
+  .selected a {
+    color: #dadada; }
 
 .membersIcon svg {
   width: 75%; }
@@ -195,7 +223,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 20px;
+  padding: 0;
   border-bottom: 2px solid #dadada; }
   @media (min-width: 1024px) {
     .bar_pie {
@@ -210,14 +238,25 @@ h1 {
     .pieDiv {
       width: 50%; } }
 
-@media (min-width: 1024px) {
-  .barDiv {
-    padding-right: 10px;
-    border-right: 2px solid #dadada; } }
+.barDiv {
+  padding: 20px; }
+  @media (min-width: 1024px) {
+    .barDiv {
+      padding-right: 10px;
+      border-right: 2px solid #dadada;
+      padding-bottom: 0px; } }
 
-@media (min-width: 1024px) {
-  .pieDiv {
-    padding-left: 10px; } }
+.pieDiv {
+  padding: 20px;
+  border-top: 2px solid #dadada; }
+  @media (min-width: 768px) {
+    .pieDiv {
+      padding-bottom: 20px; } }
+  @media (min-width: 1024px) {
+    .pieDiv {
+      padding-left: 10px;
+      padding-top: 20px;
+      border-top: none; } }
 
 @media (min-width: 1024px) {
   #pieChart {
@@ -225,6 +264,13 @@ h1 {
 
 .socialDiv,
 .membersDiv {
+  padding: 0; }
+  @media (min-width: 1024px) {
+    .socialDiv,
+    .membersDiv {
+      padding: 0 20px; } }
+
+.socialDiv {
   padding: 0 20px; }
 
 .socialIconsUl {
@@ -287,16 +333,17 @@ h1 {
 
 .membersDiv {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  border-top: 2px solid #dadada; }
   @media (min-width: 1024px) {
     .membersDiv {
       flex-direction: row;
-      border-top: 2px solid #dadada;
       border-bottom: 2px solid #dadada; } }
 
 .newMembers,
 .membersActivity {
-  width: 100%; }
+  width: 100%;
+  padding: 0 20px; }
   @media (min-width: 1024px) {
     .newMembers,
     .membersActivity {
@@ -313,9 +360,22 @@ h1 {
     .newMembers {
       border-right: 2px solid #dadada; } }
 
-@media (min-width: 1024px) {
-  .membersActivity {
-    padding-left: 20px; } }
+.membersActivity {
+  border-top: 2px solid #dadada; }
+  @media (min-width: 1024px) {
+    .membersActivity {
+      padding-left: 20px;
+      border-top: none; } }
+
+.normalEmail {
+  display: none; }
+  @media (min-width: 768px) {
+    .normalEmail {
+      display: block; } }
+
+@media (min-width: 768px) {
+  .mobileEmail {
+    display: none; } }
 
 .mem1,
 .mem2,
@@ -342,7 +402,7 @@ h1 {
   .memText a {
     color: #884dff; }
   .memText h3 {
-    color: #7c8383; }
+    color: #181b1b; }
 
 .memDate {
   flex-grow: 2;
@@ -355,8 +415,10 @@ h1 {
   width: 30px; }
 
 .SVGnav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   background-color: #3e474f;
-  display: block;
   min-width: 40px;
   max-width: 40px; }
   @media (min-width: 768px) {
@@ -364,11 +426,34 @@ h1 {
       min-width: 80px;
       max-width: 80px; } }
 
-.dashboardIcon,
-.membersIcon,
-.visitsIcon,
-.settingsIcon {
-  padding: 10px; }
+.SVGnav > div {
+  padding: 10px;
+  margin: 5px 0; }
+
+.dashboardIcon:hover #dashNav {
+  fill: #fff; }
+
+.dashboardIcon:hover {
+  border-left: 2px solid #fff;
+  border-radius: 10px; }
+  @media (min-width: 768px) {
+    .dashboardIcon:hover {
+      border-left: 5px solid #fff;
+      border-radius: 10px; } }
+
+.dashboardIcon1 {
+  border-left: 2px solid #fff;
+  border-radius: 10px; }
+  @media (min-width: 768px) {
+    .dashboardIcon1 {
+      border-left: 5px solid #fff;
+      border-radius: 10px; } }
+
+#dashNav1 {
+  fill: #fff; }
+
+#dashNav {
+  fill: #b8c0c7; }
 
 #iconStatus {
   width: 10px;
@@ -380,6 +465,7 @@ h1 {
   margin: 0 10px 0 -15px; }
 
 #alert {
+  font-size: .75em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -393,6 +479,9 @@ h1 {
     font-weight: bold; }
   #alert a {
     margin-right: 10px; }
+  @media (min-width: 768px) {
+    #alert {
+      font-size: 1em; } }
 
 .closeSVG {
   width: 20px;
@@ -401,6 +490,6 @@ h1 {
   margin-right: 10px; }
 
 #icons {
-  fill: #7c8383; }
+  fill: #181b1b; }
 
 /*# sourceMappingURL=main.css.map */

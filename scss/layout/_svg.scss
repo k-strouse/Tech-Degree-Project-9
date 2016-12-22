@@ -3,8 +3,10 @@
 }
 
 .SVGnav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   background-color: $SVGnav;
-  display: block;
   min-width: 40px;
   max-width: 40px;
   @include tablet {
@@ -13,9 +15,37 @@
   }
 }
 
-.dashboardIcon,
-.membersIcon,
-.visitsIcon,
-.settingsIcon {
+.SVGnav > div {
   padding: 10px;
+  margin: 5px 0;
+}
+
+.dashboardIcon:hover #dashNav {
+  fill: #fff;
+}
+
+.dashboardIcon:hover {
+  @include tablet {
+    border-left: 5px solid #fff;
+    border-radius: 10px;
+  }
+  border-left: 2px solid #fff;
+  border-radius:10px;
+}
+
+.dashboardIcon1 {
+  @include tablet {
+    border-left: 5px solid #fff;
+    border-radius: 10px;
+  }
+  border-left: 2px solid #fff;
+  border-radius:10px;
+}
+
+#dashNav1 {
+  fill: #fff;
+}
+
+#dashNav {
+  fill: #b8c0c7;
 }
