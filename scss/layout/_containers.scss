@@ -172,7 +172,7 @@ nav a {
   background: $secondaryBg;
   border-radius: 30%;
   a {
-      color: $secondaryText;  
+      color: $secondaryText;
   }
 }
 
@@ -205,7 +205,8 @@ nav a {
   }
 }
 
-.barDiv {
+.barDiv,
+.msgUser {
   padding: 20px;
     @include desktop {
       padding-right: 10px;
@@ -214,7 +215,8 @@ nav a {
     }
 }
 
-.pieDiv {
+.pieDiv,
+.settings {
   padding: 20px;
   border-top: 2px solid $border-top;
   @include tablet {
@@ -405,4 +407,105 @@ nav a {
 
 .memDate svg {
   align-self: flex-end;
+}
+
+.submitDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+.msgUser {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.settings {
+  width: 50%;
+}
+
+.usrForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#usrSearch,
+#usrMsg {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px #666;
+  height: 30px;
+  width: 100%;
+  padding: 10px 0;
+}
+
+#usrMsg {
+  height: 150px;
+  resize: none;
+}
+
+.usrSearch,
+.usrMsg {
+  padding-top: 20px;
+}
+
+#send {
+  border-radius: 5px;
+  height: 40px;
+  background-color: $secondaryBg;
+  color: $primaryBg;
+  width: 100%;
+  border: none;
+}
+
+.sendBtn,
+.notifications,
+.public,
+.timezone {
+  padding: 20px 0;
+}
+
+.saveCancel {
+  padding-top: 24px;
+}
+
+.notifications,
+.public {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+
+.timezone select {
+  border-radius: 5px;
+  height: 40px;
+  width: 100%;
+  background: transparent;
+  -webkit-appearance: none;
+  background: url(../img/down-arrow.png) no-repeat 97% #ddd;
+}
+
+.saveCancel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#save,
+#cancel {
+  border-radius: 5px;
+  height: 40px;
+  width: 200px;
+  border: none;
+}
+
+#save {
+  background-color: $secondaryBg;
+  color: $secondaryText;
+}
+
+#cancel {
+  background-color: $secondaryText;
+  color: $primaryText;
 }
