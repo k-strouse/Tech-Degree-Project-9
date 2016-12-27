@@ -411,16 +411,23 @@ nav a {
 
 .submitDiv {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  @include desktop {
+    flex-direction: row;
+  }
 }
 
 .msgUser {
-  width: 50%;
   padding-right: 20px;
+  @include desktop {
+    width: 50%;
+  }
 }
 
 .settings {
-  width: 50%;
+  @include desktop {
+    width: 50%;
+  }
 }
 
 .usrForm {
@@ -470,11 +477,13 @@ nav a {
 
 .notifications,
 .public {
-  width: 75%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   vertical-align: middle;
+  @include desktop {
+    width: 75%;
+  }
 }
 
 .timezone select {
@@ -489,15 +498,21 @@ nav a {
 .saveCancel {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  @include desktop {
+    justify-content: space-between;
+  }
 }
 
 #save,
 #cancel {
   border-radius: 5px;
   height: 40px;
-  width: 200px;
+  width: 100px;
   border: none;
+  @include tablet {
+    width: 200px;
+  }
 }
 
 #save {
