@@ -284,7 +284,7 @@ h1 {
       padding: 0 20px; } }
 
 .socialDiv {
-  padding: 0 20px; }
+  padding: 0 20px 20px 20px; }
 
 .socialIconsUl {
   display: flex;
@@ -328,21 +328,6 @@ h1 {
   border: 2px solid #dadada;
   border-radius: 5px;
   margin: 10px 0; }
-
-#Layer_1 {
-  position: relative;
-  top: 25%;
-  fill: #fff; }
-
-#Layer_2 {
-  position: relative;
-  top: 15%;
-  fill: #fff; }
-
-#Layer_3 {
-  position: relative;
-  top: 22%;
-  fill: #fff; }
 
 .membersDiv {
   display: flex;
@@ -544,7 +529,9 @@ h1 {
   padding: 10px;
   margin: 5px 0; }
 
-.dashboardIcon:hover #dashNav {
+.dashboardIcon:hover #dashNav2,
+.dashboardIcon:hover #dashNav3,
+.dashboardIcon:hover #dashNav4 {
   fill: #fff; }
 
 .dashboardIcon:hover {
@@ -566,8 +553,28 @@ h1 {
 #dashNav1 {
   fill: #fff; }
 
-#dashNav {
+#dashNav2,
+#dashNav3,
+#dashNav4 {
   fill: #b8c0c7; }
+
+#Layer_5 {
+  position: relative;
+  top: 25%;
+  left: 20%;
+  fill: #fff; }
+
+#Layer_2 {
+  position: relative;
+  left: 8%;
+  top: 9%;
+  fill: #fff; }
+
+#Layer_3 {
+  position: relative;
+  top: 25%;
+  left: 23%;
+  fill: #fff; }
 
 #iconStatus {
   width: 10px;

@@ -244,7 +244,7 @@ nav a {
 }
 
 .socialDiv {
-  padding: 0 20px;
+  padding: 0 20px 20px 20px;
 }
 
 .socialIconsUl {
@@ -295,24 +295,6 @@ nav a {
   border: 2px solid $border-top;
   border-radius: 5px;
   margin: 10px 0;
-}
-
-#Layer_1 {
-  position: relative;
-  top: 25%;
-  fill: #fff;
-}
-
-#Layer_2 {
-  position: relative;
-  top: 15%;
-  fill: #fff;
-}
-
-#Layer_3 {
-  position: relative;
-  top: 22%;
-  fill: #fff;
 }
 
 .membersDiv {

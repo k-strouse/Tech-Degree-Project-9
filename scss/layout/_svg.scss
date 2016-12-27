@@ -20,7 +20,9 @@
   margin: 5px 0;
 }
 
-.dashboardIcon:hover #dashNav {
+.dashboardIcon:hover #dashNav2,
+.dashboardIcon:hover #dashNav3,
+.dashboardIcon:hover #dashNav4 {
   fill: #fff;
 }
 
@@ -46,6 +48,30 @@
   fill: #fff;
 }
 
-#dashNav {
+#dashNav2,
+#dashNav3,
+#dashNav4
+ {
   fill: #b8c0c7;
+}
+
+#Layer_5 {
+  position: relative;
+  top: 25%;
+  left: 20%;
+  fill: #fff;
+}
+
+#Layer_2 {
+  position: relative;
+  left: 8%;
+  top: 9%;
+  fill: #fff;
+}
+
+#Layer_3 {
+  position: relative;
+  top: 25%;
+  left: 23%;
+  fill: #fff;
 }
