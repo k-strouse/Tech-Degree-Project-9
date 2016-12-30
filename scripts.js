@@ -11,6 +11,9 @@ var $barChart = $('#barChart');
 var $pieChart = $('#pieChart');
 var $bar2Chart = $('#bar2Chart');
 var $metricText = $('#metricText');
+var $send = $('#send');
+var $usrSearch = $('#usrSearch');
+var $usrMsg = $('#usrMsg');
 
 /*   ALERT NOTIFCATION    */
 $('#closeIcon').on('click', function() {
@@ -26,16 +29,16 @@ Chart.defaults.global.legend.display = false;
 /*Random Scaling Factor*/
 
 var RSFh = function() {
-  return Math.round(Math.random() * 10)
+  return Math.round(Math.random() * 10);
 };
 var RSFd = function() {
-  return Math.round(Math.random() * 100)
+  return Math.round(Math.random() * 100);
 };
 var RSFw = function() {
-  return Math.round(Math.random() * 1000)
+  return Math.round(Math.random() * 1000);
 };
 var RSFm = function() {
-  return Math.round(Math.random() * 10000)
+  return Math.round(Math.random() * 10000);
 };
 
 
@@ -55,7 +58,7 @@ var hourlyData = {
             pointRadius: 5,
             lineTension: 0,
             borderWidth: 1,
-            data: [RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh()],
+            data: [RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh(), RSFh()]
         }
     ],
     options: {
@@ -144,7 +147,7 @@ function createChart(ctx, chartType, data) {
     data: data,
     options: {}
   });
-};
+}
 
 createChart(lineChart, 'line', hourlyData);
 
@@ -269,73 +272,14 @@ function fitToContainer(canvas) {
   canvas.height = canvas.offsetHeight;
 }
 
+/*   MESSAGE TO USER   */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*      Create an array of li ID's to loop through
-
-var liIDs = [];
-$('#trafficHeader').find('li').each(function() {
-  liIDs.push($(this).attr('id'));
-});
-
-console.log(liIDs);
-
-$('#li1, #li2, #li3, #li4').click(function() {
-  for(i=0; i<liIDs.length; i++) {
-      var liID = liIDs[i];
-      if ($('#'+liID).hasClass('selected')) {
-          console.log('has selected class')
-    } else {
-      ($('#'+liID).removeClass('selected'));
-      console.log('remove class')
-    }
+$send.on('click', function() {
+  if($usrSearch[0].value == '' || $usrMsg[0].value == '') {
+    swal("Error", "Please fill out both form fields in order to submit a message", "error");
+  } else {
+    swal("Success!", "Your message has been submitted!", "success");
+    $usrSearch[0].value = '';
+    $usrMsg[0].value = '';
   }
 });
-
-
-$('#li1, #li2, #li3, #li4').click(function(){
-  $(this).addClass('selected');
-});
-
-*/
